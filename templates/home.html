@@ -1,0 +1,39 @@
+<!-- home.html -->
+
+
+{% extends "base.html" %}
+
+{% load staticfiles %}
+
+	{% block title %}
+		Welcome to ZooBear
+	{% endblock %}
+
+{% block head %}
+	
+<link rel="stylesheet" type="text/css" href="{% static 'css/home.css '%}"
+
+
+
+{% endblock %}
+
+{% block content %}
+    
+
+
+		<h1> 
+			Welcome {{ user.username }} !!! 
+			<br /> 
+			
+		
+			<br /> 
+		</h1>
+    
+		<button type="button" onclick="window.location.href='/step2/about/' ">Add Books</button>
+		
+		<button type="button" onclick="window.location.href='/step2/view_stuff/' ">View Books</button>
+		<br/>
+		<br/>
+
+		<button type="button" onclick="window.location.href='/logout/' ">Logout</button>
+{% endblock %}
