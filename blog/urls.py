@@ -20,6 +20,7 @@ from login.views import *
 from login import views
 from django.conf.urls import include
 from step2 import views
+from step2 import urls as step2_urls
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -29,7 +30,8 @@ urlpatterns = [
     url(r'^register/success/$', register_success),
     url(r'^accounts/login/$', 'django.contrib.auth.views.login'),
     url(r'^logout/$', logout_page),
-	url(r'^step2/about/$', views.about, name='about'),
-	url(r'^step2/view_stuff/$', views.view_stuff, name='view_stuff'),
-
+	# url(r'^step2/about/$', views.about, name='about'),
+    # url(r'^step2/request_made/$', views.req_made, name='req_made'),
+    url(r'^step2/', include(step2_urls)),
+    
 ]

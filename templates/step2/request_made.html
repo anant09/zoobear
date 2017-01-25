@@ -1,13 +1,8 @@
-<!-- home.html -->
-
-
 {% extends "base.html" %}
 
 {% load staticfiles %}
 
-	{% block title %}
-		Welcome to LandBnB
-	{% endblock %}
+	
 
 {% block head %}
 	
@@ -21,15 +16,14 @@
     
 
 
-		<h1> 
-			Welcome {{ user.username }} !!! 
-			<br /> 
 			
+			<br /> 
+				Your request has been recorded,please await confirmation email
 		
 			<br /> 
-		</h1>
+		
     
-		<button type="button" onclick="window.location.href='/step2/about/' ">Request Courier</button>
+		<button type="button" onclick="window.location.href='/home/' ">Back to home</button>
 		
 		<br/>
 		<br/>
